@@ -62,7 +62,6 @@ alter table ap_sales_data_final alter column order_date date;
 create or replace table ap_sales_data_final_date as
 select order_id,order_date,ship_date,customer_name,country,market,product_name,datediff('day',order_date,ship_date) as Days_Taken_For_Each_Order from ap_sales_data_final;
 
-select * from ap_sales_data_final_date where Days_Taken_For_Each_Order>10;
 
 --assgnment 7
 select order_id,Days_Taken_For_Each_Order,
